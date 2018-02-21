@@ -1,0 +1,164 @@
+
+#consoleSpace {
+	color: #9c9c9c;
+	text-align: center;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+
+#consoleSpace h2 {
+	margin: 10px 0;
+}
+
+#DisplayContainer {
+	display: inline-block;
+	border: 1px solid #9c9c9c;
+}
+
+#instructionsDisplay, #graphicsDisplay {
+	width: 23em;
+	height: 5em;
+	margin: 1px;
+	border: 1px solid #9c9c9c;
+}
+
+#instructionsDisplay a {
+	color: #c00b0b;
+}
+
+#graphicsDisplay {
+	height: 23em;
+	padding: 3px;
+}
+
+
+
+
+#numPad {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttonRow {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#numPad, .buttonRow {
+	display: inline-block;
+}
+
+
+
+.buttonContainer {
+	padding: 1px;
+	border: 1px solid #9c9c9c;
+	float: left;
+	margin-right: 14px;
+	text-align: center;
+}
+
+.buttonContainer:last-child {
+	margin-right: 0;
+}
+
+#menu .buttonContainer {
+	box-shadow: 2px 2px #9c9c9c;
+}
+
+#numPad .buttonContainer {
+	box-shadow: 4px 4px #9c9c9c;
+}
+
+
+
+
+button {
+	font-family: "DOS";
+	font-size: 1em;
+	color: #9c9c9c;
+	border: 1px solid #9c9c9c;
+	background-color: black;
+	outline: none;
+}
+
+#menu button {
+	width: 4.7em;
+	height: 4.7em;
+}
+
+#numPad button {
+	width: 6.9em;
+	height: 2.8em;
+}
+
+#numPad button#enterButton {
+	width: 15em;
+}
+
+
+
+
+#consoleSpace span {
+	margin-top: 5px;
+	display: block;
+}
+
+#pause {
+	display: none
+}
+
+
+/* Style for Menu Icons */
+#stopIcon {
+	margin-top: 5px;
+	width: 24px;
+	height: 24px;
+	background-color: #9c9c9c;
+	display: inline-block;
+}
+
+#runIcon {
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 24px solid #9c9c9c;
+	display: inline-block;
+}
+
+
+#pauseIcon {
+	margin-left: -5px;
+}
+
+#pauseIconBlackBar {
+	margin-top: 5px;
+	margin-left: -24px;
+	width: 7px;
+	height: 24px;
+	background-color: black;
+	display: inline-block;
+}
+
+#tinyPause {
+	display: inline;
+	margin-left: -10px;
+}
+
+#tinyPauseBar {
+	margin-top: 5px;
+	margin-left: -6px;
+	width: 2px;
+	height: 8px;
+	background-color: #9c9c9c;
+	display: inline-block;	
+}
+
+#fastIcon {
+	display: inline-block;
+	margin-left: 22px
+}
+
+#fastIcon #runIcon {
+	margin-left: -22px;
+}
+/*/////////////////////*/

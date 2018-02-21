@@ -1,0 +1,114 @@
+@font-face {
+	font-family: "DOS";
+	src: url("../fonts/perfect_dos_vga_437/Perfect DOS VGA 437 Win.ttf");
+	src: url("../fonts/perfect_dos_vga_437/Perfect DOS VGA 437.ttf");
+}
+
+body {
+	background-color: black;
+	font-family: "DOS";
+	display:flex;
+}
+
+
+#nodeSpace {
+	float: left;
+}
+
+.nr > div {
+	float: left;
+}
+
+.nr {
+	min-width: 1300px;
+	width: 1300px;
+	height: 250px;
+}
+
+.node {
+	border: 1px solid #9c9c9c;
+	display:inline-block;
+	padding: 2px;
+	min-width: 234px;
+}
+
+
+
+/*Editor Style*/
+.editor, .readOnlyEditor {
+	resize: none;
+	outline: none;
+
+	border: 1px solid #9c9c9c;
+	margin-right: 1px;
+	padding: 1px;
+	vertical-align: top;
+
+	display: inline;
+}
+
+.readOnlyEditor {
+	display: none;
+}
+
+.editor, .readOnlyEditor div {
+	background-color: black;
+	color: #cfcfcf;
+	font-size: 1em;
+	line-height: 1em;
+	font-family: "DOS";
+	width: 10.5em;
+}
+
+.readOnlyEditor div {
+	outline: none;
+	border: none;
+	padding: none;
+	display: block;
+	font-size: 1em;
+	height: 1em;
+}
+
+.readOnlyEditor div.curLine {
+	background-color: grey;
+	color: black;
+}
+
+.readOnlyEditor div.curLineBlocking {
+	background-color: #C0C0C0;
+	color: black;
+}
+/*/////////////*/
+
+
+
+/*Info Box Style*/
+.info {
+	float:right;
+}
+
+.info > div {
+	height: 3.6em;
+	width: 3.6em;
+	text-align: center;
+	border: 1px solid #9c9c9c;
+	margin: 0 0 2px 1px;
+}
+
+.info > div:last-child {
+	margin-bottom: 0px
+}
+
+.info > div > p {
+	margin-top:-.1em;
+	color: grey;
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+.info > div > p > span {
+	color: #cfcfcf;
+}
+/*/////////////*

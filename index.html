@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIS-100 Emulator</title>
+	<meta charset="utf-8"/>
+
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/arrow.css">
+	<link rel="stylesheet" type="text/css" href="css/console.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/Lexer.js"></script>
+	<script type="text/javascript" src="js/InstructionSet.js"></script>
+	<script type="text/javascript" src="js/Evaluator.js"></script>
+	<script type="text/javascript" src="js/ExecutionNode.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/ArrowPair.js"></script>
+	<script type="text/javascript" src="js/GraphicsDisplay.js"></script>
+	<script type="text/javascript" src="js/ConsoleInterface.js"></script>
+</head>
+<body>
+	<div id="consoleSpace">
+
+		<div id="instructions">
+			<h2>- TIS-100 EMULATOR -</h2>
+			<div id="DisplayContainer">
+				<div id="instructionsDisplay">
+					<span>Press RUN to begin execution.<br/><br/>For more information, visit this project's Github repo
+						<a href="https://saned.github.io/TIS-100_Emulator/">here</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div id="graphics">
+			<span>CONSOLE</span>
+			<div id="DisplayContainer">
+				<table id="graphicsDisplay" cellspacing="0" cellpadding="0">
+					<tbody id="gdBody"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="numPad">
+			<div class="buttonRow">
+				<div class="buttonContainer"><button>7</button></div>
+				<div class="buttonContainer"><button>8</button></div>
+				<div class="buttonContainer"><button>9</button></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><button>4</button></div>
+				<div class="buttonContainer"><button>5</button></div>
+				<div class="buttonContainer"><button>6</button></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><button>1</button></div>
+				<div class="buttonContainer"><button>2</button></div>
+				<div class="buttonContainer"><button>3</button></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><button>0</button></div>
+				<div class="buttonContainer"><button id="enterButton">ENTER</button></div>
+			</div>
+		</div>
+
+		<div id="menu" class="buttonRow">
+			<div class="buttonContainer">
+				<button id="stop"><div id="stopIcon"></div><span>STOP</span></button>
+			</div>
+			<div class="buttonContainer" id="pause">
+				<button>
+					<div id="pauseIcon">
+						<div id="stopIcon"></div>
+						<div id="pauseIconBlackBar"></div>
+					</div>
+					<span>PAUSE</span>
+				</button>
+			</div>
+			<div class="buttonContainer" id="step">
+				<button>
+					<div id="stepIcon">
+						<div id="runIcon"></div>
+						<div id="tinyPause">
+							<div id="tinyPauseBar"></div>
+							<div id="tinyPauseBar"></div>
+						</div>
+					</div>
+					<span>STEP</span>
+				</button>
+			</div>
+			<div class="buttonContainer">
+				<button id="run"><div id="runIcon"></div><span>RUN</span></button>
+			</div>
+			<div class="buttonContainer">
+				<button id="fast">
+					<div id="fastIcon">
+						<div id="runIcon"></div>
+						<div id="runIcon"></div>
+						<div id="runIcon"></div>
+					</div>
+					<span>FAST</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<table id="nodeSpace"></table>
+</body>
+</html>

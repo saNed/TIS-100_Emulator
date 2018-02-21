@@ -1,0 +1,123 @@
+/*
+Arrow logic borrows from:
+	https://stackoverflow.com/questions/18816486/how-can-i-make-a-pointy-arrow-with-a-div-in-css
+	https://stackoverflow.com/questions/1909648/stacking-divs-on-top-of-each-other
+	https://stackoverflow.com/questions/32547116/css-rotate-div-90-degrees-to-left-margin
+*/
+
+.arrows {
+	color: #cfcfcf;
+	width: 40px;
+}
+
+.arrow-grouping {
+  height: 30px;
+  position: relative;
+}
+
+.arrow-container {
+	margin:10px auto;
+	position: relative;
+	width: 26px;
+}
+
+.arrow {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width:20px;
+	border-bottom:8px solid #cfcfcf;
+}
+
+.output .arrow {
+	border-bottom:8px solid grey;
+}
+
+.arrow::after {	
+	content: '';
+	width: 0; 
+	height: 0; 
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-left: 9px solid #cfcfcf;
+	position: absolute;
+	right: -8px;
+	top: -3px;
+}
+
+.output .arrow:after {
+	border-left: 9px solid grey;
+}
+
+.smallarrow, .output .smallarrow {
+	top: 1px; left: 1px; 
+	border-bottom: 6px solid black;
+	width: 20px;
+}
+
+.smallarrow:after, .output .smallarrow:after {
+	margin-top: 1px;
+	border-left-color: black;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 6px solid black;
+	right: -5px;
+}
+
+.leftarrow {
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	transform-origin:center top;
+
+	margin-top: 30px; 
+}
+
+.moveText {
+	text-align: center;
+	visibility: hidden;
+	width: 36px;
+	height: 1em; 
+}
+
+
+.uparrow {
+	-moz-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	transform-origin:center top;
+  margin-bottom: 20px;
+}
+
+.downarrow {
+	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	transform-origin:center top;
+}
+
+.vertical {
+  height: 35px;
+  width: 150px;
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.vertical > div {
+  float: left;
+  display: inline-block;
+}
+
+.output {
+	margin-top: 0;
+}
+
+.output .moveText {
+	visibility: visible;
+	width: 70px;
+	color: grey;
+}
